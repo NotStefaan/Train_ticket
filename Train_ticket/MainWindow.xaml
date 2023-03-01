@@ -37,7 +37,6 @@
         </Border>
 
         <!--Main Grid-->
-
         <Grid x:Name="MainRoot">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -49,13 +48,18 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="80" />
-                <RowDefinition Height="600" />
-                <RowDefinition Height="170" />
+                <RowDefinition Height="101" />
+                <RowDefinition Height="550" />
+                <RowDefinition Height="180" />
             </Grid.RowDefinitions>
         </Grid>
+        
         <!--Header-->
-        <Border Grid.Row="1" Grid.Column="0" CornerRadius="25 25 0 0" Margin="0 0 0 750">
+        <Border 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            CornerRadius="25 25 0 0" 
+            Margin="0 0 0 750">
             <Border.Background>
 
                 <LinearGradientBrush StartPoint="0,0"
@@ -76,8 +80,10 @@
                     Color="Gray" 
                     ShadowDepth="0" />
             </Border.Effect>
+            
             <!--Buttons-->
             <StackPanel Orientation="Horizontal">
+                
                 <!--1 button-->
                 <Button 
                     Background="Transparent" 
@@ -91,6 +97,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Button>
+                
                 <!--2 button-->
                 <Button 
                     Margin="0" 
@@ -105,6 +112,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Button>
+                
                 <!--3 button-->
                 <Button 
                     Margin="0" 
@@ -119,6 +127,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Button>
+                
                 <!--4 button-->
                 <Button 
                     Margin="0" 
@@ -133,6 +142,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Button>
+                
                 <!--5 button-->
                 <Button 
                     Margin="0" 
@@ -147,6 +157,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Button>
+                
                 <!--6 button-->
                 <Button 
                     Margin="0" 
@@ -161,6 +172,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Button>
+                
                 <!--Cabinet-->
                 <Button 
                     x:Name="Cabinet"
@@ -179,12 +191,14 @@
                 </Button>
             </StackPanel>
         </Border>
+        
         <!--Footer-->
         <Border 
             Grid.Row="0" 
             Grid.Column="3" 
             CornerRadius="0 0 25 25" 
             Margin="0 650 0 0">
+
             <Border.Background>
 
                 <LinearGradientBrush StartPoint="0,0"
@@ -205,6 +219,26 @@
                     Color="Gray" 
                     ShadowDepth="0" />
             </Border.Effect>
+            
+            <!--First whiter-->
+            <Border
+                Background="White"
+                Width="300"
+                Height="80"
+                CornerRadius="20"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="40 35 0 0">
+                <StackPanel>
+                    <TextBlock
+                        Text="Wassup"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        FontFamily="Roboto"
+                        Margin="0 0"
+                        HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
         </Border>
     </Grid>
 </Window>
