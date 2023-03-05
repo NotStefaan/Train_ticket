@@ -13,11 +13,10 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
-
-    <Grid x:Name="MainBackground">
-
+    <Grid>
         <!--Background-->
-        <Border 
+
+        <Border
             Margin="0 100 0 200">
 
             <Border.Background>
@@ -26,362 +25,375 @@
                     ImageSource="Assets/Main.png"/>
 
             </Border.Background>
-
         </Border>
 
         <!--Main Grid-->
         <Grid x:Name="MainRoot">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="250" />
-                <ColumnDefinition Width="250" />
-                <ColumnDefinition Width="250" />
-                <ColumnDefinition Width="250" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="101" />
                 <RowDefinition Height="550" />
                 <RowDefinition Height="180" />
             </Grid.RowDefinitions>
-        </Grid>
-        
-        <!--Header-->
-        <Border 
-            Grid.Row="1" 
-            Grid.Column="0" 
-            CornerRadius="25 25 0 0" 
-            Margin="0 0 0 750">
-            <Border.Background>
 
-                <LinearGradientBrush StartPoint="0,0"
+            <!--Header-->
+            <Border
+                Grid.Row="0"
+                Grid.Column="0"
+                CornerRadius="25 25 0 0"
+                Width="1150">
+
+                <Border.Background>
+
+                    <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,1">
 
-                    <GradientStop Color="#FACF76"
+                        <GradientStop Color="#FACF76"
                                   Offset="0.2" />
 
-                    <GradientStop Color="#F59E19"
+                        <GradientStop Color="#F59E19"
                                   Offset="0.9" />
 
-                </LinearGradientBrush>
+                    </LinearGradientBrush>
 
-            </Border.Background>
-            <Border.Effect>
-                <DropShadowEffect 
-                    BlurRadius="30" 
-                    Color="Gray" 
-                    ShadowDepth="0" />
-            </Border.Effect>
-            
-            <!--Buttons-->
-            <StackPanel Orientation="Horizontal">
-                
-                <!--1 button-->
-                <Button 
-                    Background="Transparent" 
-                    Width="140" Height="100" 
-                    BorderBrush="Transparent"
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="18">
+                </Border.Background>
+
+                <Border.Effect>
+                    <DropShadowEffect 
+                        BlurRadius="30" 
+                        Color="Gray" 
+                        ShadowDepth="0" />
+                </Border.Effect>
+
+                <!--Buttons-->
+                <Grid>
+
+                    <!--1 button-->
+                    <Button 
+                        Background="Transparent" 
+                        Width="140" Height="100" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="18">
                         Главная
-                        </TextBlock>
-                    </StackPanel>
-                </Button>
-                
-                <!--2 button-->
-                <Button 
-                    Margin="0" 
-                    Background="Transparent" 
-                    Width="150" Height="100" 
-                    BorderBrush="Transparent"
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="18">
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!--2 button-->
+                    <Button 
+                        Margin="140 0 0 0" 
+                        Background="Transparent" 
+                        Width="150" Height="100" 
+                        BorderBrush="Transparent"
+                        HorizontalAlignment="Left">
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="18">
                         Как оплатить
-                        </TextBlock>
-                    </StackPanel>
-                </Button>
-                
-                <!--3 button-->
-                <Button 
-                    Margin="0" 
-                    Background="Transparent" 
-                    Width="150" Height="100" 
-                    BorderBrush="Transparent"
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="18">
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!--3 button-->
+                    <Button 
+                        Margin="290 0 0 0" 
+                        Background="Transparent" 
+                        Width="150" Height="100" 
+                        BorderBrush="Transparent"
+                        HorizontalAlignment="Left">
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="18">
                         Отзывы
-                        </TextBlock>
-                    </StackPanel>
-                </Button>
-                
-                <!--4 button-->
-                <Button 
-                    Margin="0" 
-                    Background="Transparent" 
-                    Width="150" Height="100" 
-                    BorderBrush="Transparent"
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="18">
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!--4 button-->
+                    <Button 
+                        Margin="440 0 0 0" 
+                        Background="Transparent" 
+                        Width="150" Height="100" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="18">
                         О компании
-                        </TextBlock>
-                    </StackPanel>
-                </Button>
-                
-                <!--5 button-->
-                <Button 
-                    Margin="0" 
-                    Background="Transparent" 
-                    Width="150" Height="100" 
-                    BorderBrush="Transparent"
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="18">
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!--5 button-->
+                    <Button 
+                        Margin="590 0 0 0" 
+                        Background="Transparent" 
+                        Width="150" Height="100" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="18">
                         Агентствам
-                        </TextBlock>
-                    </StackPanel>
-                </Button>
-                
-                <!--6 button-->
-                <Button 
-                    Margin="0" 
-                    Background="Transparent" 
-                    Width="150" Height="100" 
-                    BorderBrush="Transparent"
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="18">
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!--6 button-->
+                    <Button 
+                        Margin="740 0 0 0" 
+                        Background="Transparent" 
+                        Width="150" Height="100" 
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="18">
                         Контакты
-                        </TextBlock>
-                    </StackPanel>
-                </Button>
-                
-                <!--Cabinet-->
-                <Button 
-                    x:Name="Cabinet"
-                    Margin="0 0 0 0"
-                    HorizontalAlignment="Left"
-                    Width="150" 
-                    Height="100"
-                    Style="{StaticResource ResourceKey=DockBtnStyle}">
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
 
-                    <Button.Background>
-                        <ImageBrush 
-                            ImageSource="Assets/login.png"
-                            Stretch="Uniform"/>
-                    </Button.Background>
+                    <!--Cabinet-->
+                    <Button 
+                        x:Name="Cabinet"
+                        Margin="890 0 0 0"
+                        HorizontalAlignment="Left"
+                        Width="150" 
+                        Height="100"
+                        Foreground="Transparent">
 
-                </Button>
-            </StackPanel>
-        </Border>
-        
-        <!--Footer-->
-        <Border 
-            Grid.Row="0" 
-            Grid.Column="3" 
-            CornerRadius="0 0 25 25" 
-            Margin="0 650 0 0">
+                        <Button.Background>
+                            <ImageBrush 
+                                ImageSource="Assets/login.png"
+                                Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
 
-            <Border.Background>
+            </Border>
 
-                <LinearGradientBrush StartPoint="0,0"
+            <!--Footer-->
+            <Border
+                CornerRadius="0 0 25 25"
+                Grid.Row="2"
+                Margin="0">
+
+                <Border.Background>
+
+                    <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,1">
 
-                    <GradientStop Color="#28385D"
+                        <GradientStop Color="#28385D"
                                   Offset="0.3" />
 
-                    <GradientStop Color="#121E3C"
+                        <GradientStop Color="#121E3C"
                                   Offset="0.7" />
 
-                </LinearGradientBrush>
+                    </LinearGradientBrush>
 
-            </Border.Background>
-            <Border.Effect>
-                <DropShadowEffect 
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect 
                     BlurRadius=" 20" 
                     Color="Gray" 
                     ShadowDepth="0" />
-            </Border.Effect>
+                </Border.Effect>
 
-            <StackPanel
-                Orientation="Horizontal"
-                HorizontalAlignment="Center">
-                
-                <!--First whiter-->
-                <Border
-                Background="White"
-                Width="160"
-                Height="70"
-                CornerRadius="10 0 0 10"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="0 30 0 0">
-                    <StackPanel>
-                        <TextBlock
-                            Text="ОТКУДА"
-                            Height="30"
-                            FontSize="17"
-                            FontWeight="Medium"
-                            HorizontalAlignment="Center"
-                            Foreground="#595959"/>
-                        <TextBox
-                        Width="160"
-                        Height="40"
-                        FontSize="22"
-                        FontWeight="Medium"
-                        Margin="0"
-                        HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Border>
-                
-                <!--Second whiter-->
-                <Border
-                Background="White"
-                Width="160"
-                Height="70"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="8 30 0 0">
-                    <StackPanel>
-                        <TextBlock
-                            Text="КУДА"
-                            Height="30"
-                            FontSize="17"
-                            FontWeight="Medium"
-                            HorizontalAlignment="Center"
-                            Foreground="#595959"/>
-                        <TextBox
-                        Width="160"
-                        Height="40"
-                        FontSize="22"
-                        FontWeight="Medium"
-                        Margin="0"
-                        HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Border>
-                
-                <!--Third whiter-->
-                <Border
-                Background="White"
-                Width="160"
-                Height="70"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="8 30 0 0">
-                    <StackPanel>
-                        <TextBlock
-                            Text="КОГДА"
-                            Height="30"
-                            FontSize="17"
-                            FontWeight="Medium"
-                            HorizontalAlignment="Center"
-                            Foreground="#595959"/>
-                        <TextBox
-                        Width="160"
-                        Height="40"
-                        FontSize="22"
-                        FontWeight="Medium"
-                        Margin="0"
-                        HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Border>
-
-                <!--Fourth whiter-->
-                <Border
-                Background="White"
-                Width="160"
-                Height="70"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="8 30 0 0">
-                    <StackPanel>
-                        <TextBlock
-                            Text="ОБРАТНО"
-                            Height="30"
-                            FontSize="17"
-                            FontWeight="Medium"
-                            HorizontalAlignment="Center"
-                            Foreground="#595959"/>
-                        <TextBox
-                        Width="160"
-                        Height="40"
-                        FontSize="22"
-                        FontWeight="Medium"
-                        Margin="0"
-                        HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Border>
-
-                <!--Fivether whiter-->
-                <Border
-                Background="White"
-                Width="160"
-                Height="70"
-                CornerRadius="0 10 10 0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="8 30 0 0">
+                <!--Whiters-->
+                <Grid>
                     <StackPanel
-                        HorizontalAlignment="Center">
-                        <TextBlock
-                            Text="ТИП ВАГОНА"
-                            Height="30"
-                            FontSize="17"
-                            FontWeight="Medium"
-                            HorizontalAlignment="Center"
-                            Foreground="#595959"/>
-                        <ComboBox
-                            Width="160"
-                            Height="40"
-                            HorizontalAlignment="Center">
-                            <ComboBoxItem>
-                                <StackPanel>
-                                    <TextBlock FontSize="16">Плацкарт</TextBlock>
-                                </StackPanel>
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                <StackPanel>
-                                    <TextBlock FontSize="16">Купе</TextBlock>
-                                </StackPanel>
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                <StackPanel>
-                                    <TextBlock FontSize="16">Бизнес</TextBlock>
-                                </StackPanel>
-                            </ComboBoxItem>
-                        </ComboBox>
-                    </StackPanel>
-                </Border>
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"
+                        Height="120"
+                        Margin="0 0 0 37.5">
 
-                <!--Button-->
-                <Button 
-                    Background="Transparent" 
-                    Width="160" 
-                    Height="70" 
-                    BorderBrush="Transparent"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    Margin="8 30 0 0">
-                    <StackPanel>
-                        <TextBlock Foreground="White" FontSize="16">
+                        <!--First whiter-->
+                        <Border
+                            Background="White"
+                            Width="160"
+                            Height="70"
+                            CornerRadius="10 0 0 10"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="0 30 0 0">
+                            <StackPanel>
+                                <TextBlock
+                                    Text="ОТКУДА"
+                                    Height="30"
+                                    FontSize="17"
+                                    FontWeight="Thin"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#595959"/>
+                                <TextBox
+                                    Width="160"
+                                    Height="40"
+                                    FontSize="22"
+                                    FontWeight="Thin"
+                                    Margin="0"
+                                    HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Second whiter-->
+                        <Border
+                            Background="White"
+                            Width="160"
+                            Height="70"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="8 30 0 0">
+                            <StackPanel>
+                                <TextBlock
+                                    Text="КУДА"
+                                    Height="30"
+                                    FontSize="17"
+                                    FontWeight="Thin"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#595959"/>
+                                <TextBox
+                                    Width="160"
+                                    Height="40"
+                                    FontSize="22"
+                                    FontWeight="Thin"
+                                    Margin="0"
+                                    HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Third whiter-->
+                        <Border
+                            Background="White"
+                            Width="160"
+                            Height="70"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="8 30 0 0">
+                            <StackPanel>
+                                <TextBlock
+                                    Text="КОГДА"
+                                    Height="30"
+                                    FontSize="17"
+                                    FontWeight="Thin"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#595959"/>
+                                <TextBox
+                                    Width="160"
+                                    Height="40"
+                                    FontSize="22"
+                                    FontWeight="Thin"
+                                    Margin="0"
+                                    HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Fourth whiter-->
+                        <Border
+                            Background="White"
+                            Width="160"
+                            Height="70"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="8 30 0 0">
+                            <StackPanel>
+                                <TextBlock
+                                    Text="ОБРАТНО"
+                                    Height="30"
+                                    FontSize="17"
+                                    FontWeight="Thin"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#595959"/>
+                                <TextBox
+                                    Width="160"
+                                    Height="40"
+                                    FontSize="22"
+                                    FontWeight="Thin"
+                                    Margin="0"
+                                    HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Fivether whiter-->
+                        <Border
+                            Background="White"
+                            Width="160"
+                            Height="70"
+                            CornerRadius="0 10 10 0"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="8 30 0 0">
+                            <StackPanel
+                                HorizontalAlignment="Center">
+                                <TextBlock
+                                    Text="ТИП ВАГОНА"
+                                    Height="30"
+                                    FontSize="17"
+                                    FontWeight="Thin"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#595959"/>
+                                <ComboBox
+                                    Width="160"
+                                    Height="40"
+                                    HorizontalAlignment="Center">
+                                    <ComboBoxItem>
+                                        <StackPanel>
+                                            <TextBlock FontSize="16" FontWeight="Thin">Плацкарт</TextBlock>
+                                        </StackPanel>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        <StackPanel>
+                                            <TextBlock FontSize="16" FontWeight="Thin">Купе</TextBlock>
+                                        </StackPanel>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        <StackPanel>
+                                            <TextBlock FontSize="16" FontWeight="Thin">Бизнес</TextBlock>
+                                        </StackPanel>
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </Border>
+
+                        <!--Button-->
+                        <Button 
+                            Background="Transparent" 
+                            Width="160" 
+                            Height="70" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Margin="8 30 0 0">
+                            <StackPanel>
+                                <TextBlock Foreground="White" FontSize="16" >
                         НАЙТИ БИЛЕТЫ
-                        </TextBlock>
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
                     </StackPanel>
-                </Button>
-                
-                <!--<Wassup></Wassup>-->
-            </StackPanel>
-        </Border>
+
+                    <!--Самые нижние кнопки-->
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="0 120 0 0">
+
+                        <Button 
+                            Background="Transparent" 
+                            Width="160" 
+                            Height="30" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            Margin="30 0 0 0">
+                            <StackPanel>
+                                <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
+                                    Политика приватности
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
  
