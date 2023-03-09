@@ -17,7 +17,7 @@
         <!--Background-->
 
         <Border
-            Margin="0 100 0 200">
+            Margin="0 80 0 200">
 
             <Border.Background>
 
@@ -31,15 +31,14 @@
         <Grid x:Name="MainRoot">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="101" />
-                <RowDefinition Height="550" />
-                <RowDefinition Height="180" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="570" />
+                <RowDefinition Height="200" />
             </Grid.RowDefinitions>
 
             <!--Header-->
             <Border
                 Grid.Row="0"
-                Grid.Column="0"
                 CornerRadius="25 25 0 0"
                 Width="1150">
 
@@ -71,7 +70,7 @@
                     <!--1 button-->
                     <Button 
                         Background="Transparent" 
-                        Width="140" Height="100" 
+                        Width="140" Height="80" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left">
@@ -86,7 +85,7 @@
                     <Button 
                         Margin="140 0 0 0" 
                         Background="Transparent" 
-                        Width="150" Height="100" 
+                        Width="150" Height="80" 
                         BorderBrush="Transparent"
                         HorizontalAlignment="Left">
                         <StackPanel>
@@ -100,7 +99,7 @@
                     <Button 
                         Margin="290 0 0 0" 
                         Background="Transparent" 
-                        Width="150" Height="100" 
+                        Width="150" Height="80" 
                         BorderBrush="Transparent"
                         HorizontalAlignment="Left">
                         <StackPanel>
@@ -114,7 +113,7 @@
                     <Button 
                         Margin="440 0 0 0" 
                         Background="Transparent" 
-                        Width="150" Height="100" 
+                        Width="150" Height="80" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left">
@@ -129,7 +128,7 @@
                     <Button 
                         Margin="590 0 0 0" 
                         Background="Transparent" 
-                        Width="150" Height="100" 
+                        Width="150" Height="80" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left">
@@ -144,7 +143,7 @@
                     <Button 
                         Margin="740 0 0 0" 
                         Background="Transparent" 
-                        Width="150" Height="100" 
+                        Width="150" Height="80" 
                         BorderBrush="Transparent"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left">
@@ -158,11 +157,12 @@
                     <!--Cabinet-->
                     <Button 
                         x:Name="Cabinet"
-                        Margin="890 0 0 0"
-                        HorizontalAlignment="Left"
-                        Width="150" 
-                        Height="100"
-                        Foreground="Transparent">
+                        Margin="0 0 80 0"
+                        HorizontalAlignment="Right"
+                        Width="80" 
+                        Height="80"
+                        Foreground="Transparent"
+                        BorderBrush="Transparent">
 
                         <Button.Background>
                             <ImageBrush 
@@ -196,7 +196,7 @@
                 </Border.Background>
                 <Border.Effect>
                     <DropShadowEffect 
-                    BlurRadius=" 20" 
+                    BlurRadius="20" 
                     Color="Gray" 
                     ShadowDepth="0" />
                 </Border.Effect>
@@ -205,34 +205,28 @@
                 <Grid>
                     <StackPanel
                         HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
                         Orientation="Horizontal"
                         Height="120"
-                        Margin="0 0 0 37.5">
+                        Margin="0 18 0 37.5">
 
                         <!--First whiter-->
                         <Border
                             Background="White"
                             Width="160"
-                            Height="70"
-                            CornerRadius="10 0 0 10"
-                            VerticalAlignment="Top"
+                            Height="50"
+                            VerticalAlignment="Center"
                             HorizontalAlignment="Left"
-                            Margin="0 30 0 0">
+                            Margin="0 0 0 0">
                             <StackPanel>
-                                <TextBlock
-                                    Text="ОТКУДА"
-                                    Height="30"
-                                    FontSize="17"
-                                    FontWeight="Thin"
-                                    HorizontalAlignment="Center"
-                                    Foreground="#595959"/>
-                                <TextBox
-                                    Width="160"
-                                    Height="40"
-                                    FontSize="22"
-                                    FontWeight="Thin"
-                                    Margin="0"
-                                    HorizontalAlignment="Center"/>
+                                <TextBox Style="{StaticResource placeHolder}" 
+                                         Tag="Откуда" 
+                                         FontSize="17"
+                                         FontWeight="Thin"
+                                         Height="50" 
+                                         TextWrapping="Wrap" 
+                                         Width="160"
+                                         HorizontalContentAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
@@ -240,25 +234,17 @@
                         <Border
                             Background="White"
                             Width="160"
-                            Height="70"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"
-                            Margin="8 30 0 0">
+                            Height="50"
+                            Margin="4 0 0 0">
                             <StackPanel>
-                                <TextBlock
-                                    Text="КУДА"
-                                    Height="30"
-                                    FontSize="17"
-                                    FontWeight="Thin"
-                                    HorizontalAlignment="Center"
-                                    Foreground="#595959"/>
-                                <TextBox
-                                    Width="160"
-                                    Height="40"
-                                    FontSize="22"
-                                    FontWeight="Thin"
-                                    Margin="0"
-                                    HorizontalAlignment="Center"/>
+                                <TextBox Style="{StaticResource placeHolder}" 
+                                         Tag="Куда" 
+                                         FontSize="17"
+                                         FontWeight="Thin"
+                                         Height="50" 
+                                         TextWrapping="Wrap" 
+                                         Width="160"
+                                         HorizontalContentAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
@@ -266,25 +252,17 @@
                         <Border
                             Background="White"
                             Width="160"
-                            Height="70"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"
-                            Margin="8 30 0 0">
+                            Height="50"
+                            Margin="4 0 0 0">
                             <StackPanel>
-                                <TextBlock
-                                    Text="КОГДА"
-                                    Height="30"
-                                    FontSize="17"
-                                    FontWeight="Thin"
-                                    HorizontalAlignment="Center"
-                                    Foreground="#595959"/>
-                                <TextBox
-                                    Width="160"
-                                    Height="40"
-                                    FontSize="22"
-                                    FontWeight="Thin"
-                                    Margin="0"
-                                    HorizontalAlignment="Center"/>
+                                <TextBox Style="{StaticResource placeHolder}" 
+                                         Tag="Когда" 
+                                         FontSize="17"
+                                         FontWeight="Thin"
+                                         Height="50" 
+                                         TextWrapping="Wrap" 
+                                         Width="160"
+                                         HorizontalContentAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
@@ -292,25 +270,17 @@
                         <Border
                             Background="White"
                             Width="160"
-                            Height="70"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"
-                            Margin="8 30 0 0">
+                            Height="50"
+                            Margin="4 0 0 0">
                             <StackPanel>
-                                <TextBlock
-                                    Text="ОБРАТНО"
-                                    Height="30"
-                                    FontSize="17"
-                                    FontWeight="Thin"
-                                    HorizontalAlignment="Center"
-                                    Foreground="#595959"/>
-                                <TextBox
-                                    Width="160"
-                                    Height="40"
-                                    FontSize="22"
-                                    FontWeight="Thin"
-                                    Margin="0"
-                                    HorizontalAlignment="Center"/>
+                                <TextBox Style="{StaticResource placeHolder}" 
+                                         Tag="Обратно" 
+                                         FontSize="17"
+                                         FontWeight="Thin"
+                                         Height="50" 
+                                         TextWrapping="Wrap" 
+                                         Width="160"
+                                         HorizontalContentAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
@@ -318,24 +288,21 @@
                         <Border
                             Background="White"
                             Width="160"
-                            Height="70"
-                            CornerRadius="0 10 10 0"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"
-                            Margin="8 30 0 0">
+                            Height="50"
+                            Margin="4 0 0 0">
                             <StackPanel
                                 HorizontalAlignment="Center">
                                 <TextBlock
-                                    Text="ТИП ВАГОНА"
+                                    Text="Тип вагона"
                                     Height="30"
                                     FontSize="17"
                                     FontWeight="Thin"
-                                    HorizontalAlignment="Center"
-                                    Foreground="#595959"/>
+                                    Foreground="Gray"/>
                                 <ComboBox
                                     Width="160"
-                                    Height="40"
-                                    HorizontalAlignment="Center">
+                                    Height="30"
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center">
                                     <ComboBoxItem>
                                         <StackPanel>
                                             <TextBlock FontSize="16" FontWeight="Thin">Плацкарт</TextBlock>
@@ -356,37 +323,124 @@
                         </Border>
 
                         <!--Button-->
-                        <Button 
+                        <Button
+                            Style="{DynamicResource RoundCorner}" 
                             Background="Transparent" 
                             Width="160" 
-                            Height="70" 
+                            Height="50" 
                             BorderBrush="Transparent"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Top"
-                            Margin="8 30 0 0">
+                            Margin="4 0 0 0"
+                            >
                             <StackPanel>
                                 <TextBlock Foreground="White" FontSize="16" >
-                        НАЙТИ БИЛЕТЫ
+                                    НАЙТИ БИЛЕТЫ
                                 </TextBlock>
                             </StackPanel>
                         </Button>
+
                     </StackPanel>
 
                     <!--Самые нижние кнопки-->
                     <StackPanel
                         Orientation="Horizontal"
-                        Margin="0 120 0 0">
+                        Margin="0 110 0 0">
 
+                        <!--Logotype Rzd-->
+                        <Border 
+                        x:Name="Rzd_Button"
+                        Margin="30 0 0 0"
+                        HorizontalAlignment="Center"
+                        Width="180" 
+                        Height="90"
+                        BorderBrush="Transparent">
+
+                            <Border.Background>
+                                <ImageBrush 
+                                ImageSource="Assets/Rzd.png"
+                                Stretch="Uniform"/>
+                            </Border.Background>
+                        </Border>
+
+                        <!--1-->
                         <Button 
                             Background="Transparent" 
-                            Width="160" 
                             Height="30" 
                             BorderBrush="Transparent"
                             HorizontalAlignment="Center"
-                            Margin="30 0 0 0">
+                            Margin="5 0 0 0">
                             <StackPanel>
                                 <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
-                                    Политика приватности
+                                    Услуги холдинга
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        
+                        <!--2-->
+                        <Button 
+                            Background="Transparent" 
+                            Height="30" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            Margin="3 0 0 0">
+                            <StackPanel>
+                                <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
+                                    Подвижной состав
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <!--3-->
+                        <Button 
+                            Background="Transparent" 
+                            Height="30" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            Margin="3 0 0 0">
+                            <StackPanel>
+                                <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
+                                    Оформление грузов
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <!--4-->
+                        <Button 
+                            Background="Transparent" 
+                            Height="30" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            Margin="3 0 0 0">
+                            <StackPanel>
+                                <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
+                                    Перевозимые грузы
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <!--5-->
+                        <Button 
+                            Background="Transparent" 
+                            Height="30" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            Margin="3 0 0 0">
+                            <StackPanel>
+                                <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
+                                    Деятельность
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <!--6-->
+                        <Button 
+                            Background="Transparent" 
+                            Height="30" 
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Center"
+                            Margin="3 0 0 0">
+                            <StackPanel>
+                                <TextBlock FontWeight="Light" Foreground="LightGray" FontSize="15">
+                                    Структура
                                 </TextBlock>
                             </StackPanel>
                         </Button>
