@@ -24,5 +24,28 @@ namespace Train_ticket
         {
             InitializeComponent();
         }
+
+        //обработчик нажатия на кнопу ЛК
+        private void AddPresetButton_Click(object sender, RoutedEventArgs e)
+        {
+            var addButton = sender as FrameworkElement;
+            if (addButton != null)
+            {
+                addButton.ContextMenu.IsOpen = true;
+            }
+        }
+
+        //Обработчик комбобокса типа билетов
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            TypeOfBox.Items.Insert(0, "Please select any value");
+            TypeOfBox.SelectedIndex = 0;
+            TypeOfBox.Text = "Please, select any value";
+            if (TypeOfBox.SelectedIndex < 0)
+            {
+                TypeOfBox.Text = "Please, select any value";
+            }
+        }
+
     }
 }

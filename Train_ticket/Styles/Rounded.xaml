@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <!--Rounded button-->
     <Style x:Key="RoundCorner" TargetType="{x:Type Button}">
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -59,4 +60,84 @@
             </Setter.Value>
         </Setter>
     </Style>
+        
+    <!--Rounded textbox-->
+    <Style x:Key="Round_box" 
+           TargetType="{x:Type TextBox}">
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type TextBox}">
+                    
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="3">
+                        
+                        <ScrollViewer 
+                            Name="PART_ContentHost" 
+                            SnapsToDevicePixels="{TemplateBinding 
+                            UIElement.SnapsToDevicePixels}" />
+                </Border>
+                                     
+                </ControlTemplate>
+            </Setter.Value>
+            
+        </Setter>
+    </Style>
+
+    <!--Rounded passbox-->
+    <Style 
+        x:Key="Rounder_Pass_box" 
+        TargetType="{x:Type PasswordBox}">
+        <Setter 
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate 
+                    TargetType="{x:Type PasswordBox}">
+                    <Border Background="{TemplateBinding Background}" 
+                            x:Name="Bd" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            CornerRadius="3">
+                        <ScrollViewer 
+                            Name="PART_ContentHost" 
+                            SnapsToDevicePixels="{TemplateBinding 
+                            UIElement.SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger 
+                            Property="IsEnabled" 
+                            Value="False">
+                            <Setter 
+                                Property="Background" 
+                                Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+                                TargetName="Bd"/>
+                            <Setter 
+                                Property="Foreground" 
+                                Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                        <Trigger 
+                            Property="Width" 
+                            Value="Auto">
+                            <Setter 
+                                Property="MinWidth" 
+                                Value="100"/>
+                        </Trigger>
+                        <Trigger 
+                            Property="Height" 
+                            Value="Auto">
+                            <Setter 
+                                Property="MinHeight" 
+                                Value="20"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
 </ResourceDictionary>

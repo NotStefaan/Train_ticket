@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Train_ticket"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="850" 
+        Title="Rzd" Height="850" 
         Width="1150"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -14,6 +14,8 @@
         Background="Transparent"
         AllowsTransparency="True">
     <Grid>
+
+        
         <!--Background-->
 
         <Border
@@ -39,7 +41,7 @@
             <!--Header-->
             <Border
                 Grid.Row="0"
-                CornerRadius="25 25 0 0"
+                CornerRadius="15 15 0 0"
                 Width="1150">
 
                 <Border.Background>
@@ -48,9 +50,9 @@
                                      EndPoint="1,1">
 
                         <GradientStop Color="#FACF76"
-                                  Offset="0.2" />
+                                  Offset="0.35" />
 
-                        <GradientStop Color="#F59E19"
+                        <GradientStop Color="#F59E02"
                                   Offset="0.9" />
 
                     </LinearGradientBrush>
@@ -149,7 +151,7 @@
                         HorizontalAlignment="Left">
                         <StackPanel>
                             <TextBlock Foreground="White" FontSize="18">
-                        Контакты
+                                Контакты
                             </TextBlock>
                         </StackPanel>
                     </Button>
@@ -162,13 +164,39 @@
                         Width="80" 
                         Height="80"
                         Foreground="Transparent"
-                        BorderBrush="Transparent">
+                        BorderBrush ="Transparent">
 
                         <Button.Background>
                             <ImageBrush 
                                 ImageSource="Assets/login.png"
                                 Stretch="Uniform"/>
                         </Button.Background>
+
+                        <MenuItem Width="50"
+                                  Click="AddPresetButton_Click" 
+                                  x:Name="AddPresetButton"
+                                  Height="50">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/login.png" Height="20"/>
+                            </MenuItem.Icon>
+                            <MenuItem.Header>
+                                <StackPanel 
+                                    Orientation="Horizontal">
+                                    <TextBlock 
+                                        Text="Add Preset"/>
+                                    <Image Source="/Assets/login.png"
+                                           Height="10" Margin="2,0,0,0"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Личный кабинет" Foreground="#121E3C"/>
+                                    <MenuItem Header="Выйти" Foreground="Red"/>
+                                </ContextMenu>
+                            </MenuItem.ContextMenu>
+                        </MenuItem>
+
+
                     </Button>
                 </Grid>
 
@@ -176,7 +204,7 @@
 
             <!--Footer-->
             <Border
-                CornerRadius="0 0 25 25"
+                CornerRadius="0 0 15 15"
                 Grid.Row="2"
                 Margin="0">
 
@@ -221,12 +249,13 @@
                             <StackPanel>
                                 <TextBox Style="{StaticResource placeHolder}" 
                                          Tag="Откуда" 
-                                         FontSize="17"
+                                         FontSize="19"
                                          FontWeight="Thin"
                                          Height="50" 
                                          TextWrapping="Wrap" 
                                          Width="160"
-                                         HorizontalContentAlignment="Center"/>
+                                         HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"/>
                             </StackPanel>
                         </Border>
 
@@ -239,7 +268,7 @@
                             <StackPanel>
                                 <TextBox Style="{StaticResource placeHolder}" 
                                          Tag="Куда" 
-                                         FontSize="17"
+                                         FontSize="19"
                                          FontWeight="Thin"
                                          Height="50" 
                                          TextWrapping="Wrap" 
@@ -292,17 +321,15 @@
                             Margin="4 0 0 0">
                             <StackPanel
                                 HorizontalAlignment="Center">
-                                <TextBlock
-                                    Text="Тип вагона"
-                                    Height="30"
-                                    FontSize="17"
-                                    FontWeight="Thin"
-                                    Foreground="Gray"/>
                                 <ComboBox
                                     Width="160"
-                                    Height="30"
+                                    Height="50"
                                     HorizontalAlignment="Center"
-                                    HorizontalContentAlignment="Center">
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    SelectedIndex = "0"
+                                    Text = "Please, select any value"
+                                    x:Name="TypeOfBox">
                                     <ComboBoxItem>
                                         <StackPanel>
                                             <TextBlock FontSize="16" FontWeight="Thin">Плацкарт</TextBlock>
@@ -329,7 +356,7 @@
                             Width="160" 
                             Height="50" 
                             BorderBrush="Transparent"
-                            Margin="4 0 0 0"
+                            Margin="10 0 0 0"
                             >
                             <StackPanel>
                                 <TextBlock Foreground="White" FontSize="16" >
@@ -374,7 +401,7 @@
                                 </TextBlock>
                             </StackPanel>
                         </Button>
-                        
+
                         <!--2-->
                         <Button 
                             Background="Transparent" 
@@ -448,6 +475,25 @@
                 </Grid>
             </Border>
         </Grid>
+        
+                            <!--Looking tickets-->
+        <Border
+            Width="550"
+            Height="500"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Background="White" 
+            Margin="30 0 0 115"
+            CornerRadius="20">
+
+            <Border.Effect>
+                <DropShadowEffect 
+                        BlurRadius="60"
+                        Opacity="90"
+                        Color="LightGray" 
+                        ShadowDepth="0" />
+            </Border.Effect>
+        </Border>
     </Grid>
 </Window>
  
