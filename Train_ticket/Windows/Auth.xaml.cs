@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Train_ticket.Views;
 
 namespace Train_ticket.Windows
 {
@@ -22,6 +23,9 @@ namespace Train_ticket.Windows
         public Auth()
         {
             InitializeComponent();
+            MainFrame.NavigationService.Navigate(new Autoriz());
+
         }
+
     }
 }
