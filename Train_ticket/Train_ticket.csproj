@@ -126,6 +126,7 @@
     <Compile Include="BD\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\UserObj.cs" />
     <Compile Include="Views\Autoriz.xaml.cs">
       <DependentUpon>Autoriz.xaml</DependentUpon>
     </Compile>

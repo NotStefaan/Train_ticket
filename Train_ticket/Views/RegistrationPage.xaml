@@ -29,21 +29,45 @@
                                    FontWeight="Thin"
                                    Foreground="Black"/>
 
-
-                    <!--Текстбоксы-->
-
                     <TextBlock Text="Логин" 
-                                   Height="20"
-                                   Margin="60 0 0 150"
+                                   Height="15"
+                                   Margin="55 0 10 150"
+                                   FontSize="15"
+                                   FontFamily="Bahnschrift"
+                                   FontWeight="Thin"/>
+                    
+                    <TextBlock Text="Email" 
+                                   Height="15"
+                                   Margin="180 0 0 150"
                                    FontSize="15"
                                    FontFamily="Bahnschrift"
                                    FontWeight="Thin"/>
 
-                    <TextBox
+                    <!--login and Emai-->
+                    <StackPanel Orientation="Horizontal">
+                        
+                        
+
+                        <TextBox
                             x:Name="Reg_name"
-                            VerticalAlignment="Center"
-                            Width="240"
-                            Height="35"
+                            Width="115"
+                            Height="30"
+                            Background="Azure"
+                            BorderBrush="DarkBlue"
+                            BorderThickness="2"
+                            Style="{DynamicResource Round_box}"
+                            Margin="55 0 10 80"
+                            FontSize="18"
+                            FontWeight="Thin">
+
+                        </TextBox>
+
+                        
+
+                        <TextBox
+                            x:Name="Reg_Email"
+                            Width="115"
+                            Height="30"
                             Background="Azure"
                             BorderBrush="DarkBlue"
                             BorderThickness="2"
@@ -52,7 +76,13 @@
                             FontSize="18"
                             FontWeight="Thin">
 
-                    </TextBox>
+                        </TextBox>
+                        
+
+                    </StackPanel>
+                    
+
+                    <!--Текстбоксы-->
 
                     <TextBlock Text="Пароль" 
                                    Height="20"
@@ -63,9 +93,8 @@
 
                     <PasswordBox
                             x:Name="Reg_pass"
-                            VerticalAlignment="Center"
                             Width="240"
-                            Height="35"
+                            Height="30"
                             Background="Azure"
                             BorderBrush="DarkBlue"
                             BorderThickness="2"
@@ -87,7 +116,7 @@
                             x:Name="Reg_pass2"
                             VerticalAlignment="Center"
                             Width="240"
-                            Height="35"
+                            Height="30"
                             Background="Azure"
                             BorderBrush="DarkBlue"
                             BorderThickness="2"

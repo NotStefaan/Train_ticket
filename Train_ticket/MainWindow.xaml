@@ -150,11 +150,12 @@
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left">
                         <StackPanel>
-                            <TextBlock Foreground="White" FontSize="18">
+                            <TextBlock x:Name="Contacts" Foreground="White" FontSize="18">
                                 Контакты
                             </TextBlock>
                         </StackPanel>
                     </Button>
+                    
 
                     <!--Cabinet-->
                     <Button 

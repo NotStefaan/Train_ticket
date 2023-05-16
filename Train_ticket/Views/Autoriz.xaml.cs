@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Train_ticket.BD;
+using Train_ticket.Controllers;
+using Train_ticket.Windows;
 
 namespace Train_ticket.Views
 {
@@ -48,7 +50,12 @@ namespace Train_ticket.Views
             }
 
             //Пользователь найден
-           
+            if (User != null) 
+            {
+                UserObj.pohui = User;
+                new MainWindow().Show();
+
+            }
 
         }
     }

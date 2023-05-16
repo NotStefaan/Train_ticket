@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Train_ticket.Controllers;
 
 namespace Train_ticket
 {
@@ -23,6 +24,7 @@ namespace Train_ticket
         public MainWindow()
         {
             InitializeComponent();
+            Contacts.Text = UserObj.pohui.Name;
         }
 
         //обработчик нажатия на кнопу ЛК

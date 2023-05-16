@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -33,20 +35,30 @@ namespace Train_ticket.Views
 
         private void Registr_button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             try
             {
-                var User = Train_dbEntities1.GetContext().Users.Add(new Users()
+
+                if (Reg_pass.Password != Reg_pass2.Password)
                 {
-                    Name = Reg_name.Text,
-                    PasswordHash = Reg_pass.Password,
-                    Email = "Undefined",
-                    RegistrationDate = DateTime.Now,
-                });
 
-                Train_dbEntities1.GetContext().SaveChanges();
+                    Reg_pass2.ToolTip = "Пароли не совпадают";
+                    Reg_pass2.BorderBrush = Brushes.Red;
+                }
+                else
+                {
+                    var User = Train_dbEntities1.GetContext().Users.Add(new Users()
+                    {
+                        Name = Reg_name.Text,
+                        PasswordHash = Reg_pass.Password,
+                        Email = Reg_Email.Text,
+                        RegistrationDate = DateTime.Now
+                    });
 
-                MessageBox.Show($"Пользователь {User.Name} зарегестрировался");
+                    Reg_pass2.BorderBrush = Brushes.DarkBlue;
+                    Train_dbEntities1.GetContext().SaveChanges();
+                    MessageBox.Show($"Пользователь {User.Name} зарегестрировался");
+                }
             }
             catch (Exception Ex)
             {
